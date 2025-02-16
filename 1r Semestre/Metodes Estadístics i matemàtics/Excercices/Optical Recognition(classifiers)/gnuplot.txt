@@ -1,0 +1,13 @@
+cd 'C:\CARRERAS\MASTER UB\1r Semestre\Metodes Estadístics i matemàtics\Excercices\Optical Recognition(classifiers)'
+
+set xrange[-0.5:25.5]
+set yrange[-0.5:25.5]
+set palette defined (0 'white',0.02 'red', 1 'green')
+
+set ylabel 'real letter'
+set xlabel 'classified as'
+
+set xtics ("a"0,"b"1,"c"2,"d"3,"e"4,"f"5,"g"6,"h"7,"i"8,"j"9,"k"10,"l"11,"m"12,"n"13,"o"14,"p"15,"q"16,"r"17,"s"18,"t"19,"u"20,"v"21,"w"22,"x"23,"y"24,"z"25)
+set ytics ("a"0,"b"1,"c"2,"d"3,"e"4,"f"5,"g"6,"h"7,"i"8,"j"9,"k"10,"l"11,"m"12,"n"13,"o"14,"p"15,"q"16,"r"17,"s"18,"t"19,"u"20,"v"21,"w"22,"x"23,"y"24,"z"25)
+
+plot "CM_ibk.txt" matrix with image notitle,'CM_ibk.txt' matrix using 1:2:(sprintf('%.0f', $3)) with labels font ',7' notitle
